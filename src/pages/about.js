@@ -23,7 +23,7 @@ const About = () => {
   const aboutgrid = [
     {
       id: 1,
-      name: "Ui/Ux Design",
+      name: "Ui Ux Design",
       discription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
     },
@@ -45,6 +45,18 @@ const About = () => {
       discription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
     },
+    {
+      id: 5,
+      name: "Mobile App Development",
+      discription:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
+    },
+    {
+      id: 6,
+      name: "IT Support",
+      discription:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
+    },
   ]
 
   return (
@@ -52,7 +64,7 @@ const About = () => {
       <Layout>
         <section>
           <div className="flex justify-center items-center  bg-black">
-            <div className="grid grid-cols-1 md:grid-cols-2  mx-20 ">
+            <div className="flex flex-cols gap-7  mx-20 ">
               <div className="flex justify-start ">
                 <Menu />
               </div>
@@ -65,7 +77,7 @@ const About = () => {
                   </Slide>
                   <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" />
                 </div>
-                <Fade delay={1000} cascade damping={1e-1}>
+                <Fade delay={1200} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
                     I'm Creative Director and UI/UX Designer from Sydney,
                     Australia, working in web development and print media. I
@@ -74,37 +86,42 @@ const About = () => {
                   </div>
                 </Fade>
 
-                <Fade delay={1100} cascade damping={1e-1}>
+                <Fade delay={1400} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
                     My aim is to bring across your message and identity in the
                     most creative way. I created web design for many famous
                     brand companies.
                   </div>
                 </Fade>
-                <div className=" text-2xl text-white mt-7">What I do!</div>
+                <Fade delay={1800} cascade damping={1e-1}>
+                  <div className=" text-2xl text-white mt-7">What I do!</div>
+                </Fade>
+
                 <div className="grid grid-cols-2 grid-rows-2 gap-3 mt-7">
                   {aboutgrid.map((item, index) => (
-                    <div className="border border-[#212425] rounded-lg p-5">
-                      <div class="grid grid-rows-3 grid-flow-col">
-                        <div class="row-span-3 ...  mx-5 items-center">
-                          <GatsbyImage
-                            image={getImage(
-                              data.allFile.nodes.find(
-                                node => node.name === item.name
-                              )
-                            )}
-                            alt={item.name}
-                            className="w-[20px] h-[20px]"
-                          />
-                        </div>
-                        <div class="col-span-2 ... mr-0 text-lg text-white  items-center">
-                          {item.name}
-                        </div>
-                        <div class="row-span-2 col-span-2 ...mr-0 text-[#A6A6A6]">
-                          {item.discription}
+                    <Fade delay={2000} cascade damping={1e-1}>
+                      <div className="border border-[#212425] rounded-lg p-5">
+                        <div class="grid grid-rows-3 grid-flow-col">
+                          <div class="row-span-3 ...  mx-5 items-center pt-1">
+                            <GatsbyImage
+                              image={getImage(
+                                data.allFile.nodes.find(
+                                  node => node.name === item.name
+                                )
+                              )}
+                              alt={item.name}
+                              className="w-7"
+                            />
+                          </div>
+                          <div class="col-span-2 ... mr-0 text-lg text-white  items-center">
+                            {item.name}
+                          </div>
+                          <div class="row-span-2 col-span-2 ...mr-0 text-[#A6A6A6]">
+                            {item.discription}
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Fade>
                   ))}
                 </div>
               </div>
