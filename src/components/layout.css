@@ -34,14 +34,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
-  font-family: sans-serif;
-  font-family: var(--font-sans);
-  font-weight: normal;
-  margin: 0;
-  word-wrap: break-word;
+  font-family: Poppins;
 }
 a {
   background-color: transparent;
