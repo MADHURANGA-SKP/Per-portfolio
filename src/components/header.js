@@ -80,10 +80,10 @@ const Header = () => {
         }
       >
         <div className={scroll ? "fixed top-0 w-full bg-gray-900" : "w-full"}>
-          <div className="bg-black pt-5 px-20">
+          <div className="bg-black pt-5 ">
             <div className="flex justify-end">
               <Link to="/" className="cursor-pointer custom-link ">
-                <div className="flex items-center justify-between space-x-3 mr-20">
+                <div className="flex items-center justify-between space-x-3 mx-20">
                   {header.map((item, index) => (
                     <div
                       className="flex flex-col justify-center items-center text-center bg-[#212425] text-white hover:bg-gradient-to-r from-red-400 to-pink-500 active:bg-gradient-to-r rounded-lg"

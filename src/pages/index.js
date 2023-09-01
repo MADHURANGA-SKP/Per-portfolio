@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import videoSrc from "../video/spaceman-walking-animated-wallpaper.mp4"
 import { useGlitch, GlitchHandle } from "react-powerglitch"
+import { Link } from "gatsby"
 
 const IndexPage = () => {
   // const glitch = useGlitch()
@@ -26,12 +27,14 @@ const IndexPage = () => {
           </div>
 
           <div className="flex bg-black/50 p-10 rounded-3xl mx-10">
-            <button class="group relative h-12 w-full md:px-2 px-5 md:py-0 py-3 overflow-hidden rounded-lg bg-black/50 text-lg ">
-              <div class="absolute inset-0 w-3 bg-[#3B71CA]/75 transition-all duration-[800ms] ease-out group-hover:w-full"></div>
-              <span class="relative text-white group-hover:text-white font-semibold uppercase md:text-lg text-xs  ">
-                Start your Journey!
-              </span>
-            </button>
+            <Link to="/about" className="w-full">
+              <button class="group relative h-12 w-full md:px-2 px-5 md:py-0 py-3 overflow-hidden rounded-lg bg-black/50 text-lg ">
+                <div class="absolute inset-0 w-3 bg-[#3B71CA]/75 transition-all duration-[800ms] ease-out group-hover:w-full"></div>
+                <span class="relative text-white group-hover:text-white font-semibold uppercase md:text-lg text-xs  ">
+                  Start your Journey!
+                </span>
+              </button>
+            </Link>
             {/* ref={glitch.ref} */}
           </div>
         </div>
