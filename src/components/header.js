@@ -1,11 +1,11 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { useState, useEffect } from "react"
 import { Link } from "gatsby"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
-  // Define the GraphQL query and store its result in the "data" variable.
+  //Define the GraphQL query and store its result in the "data" variable.
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
