@@ -59,6 +59,16 @@ const About = () => {
     },
   ]
 
+  const clients = [
+    {
+      id: 1,
+      name: "brand",
+    },
+    { id: 2, name: "brand" },
+    { id: 3, name: "brand" },
+    { id: 4, name: "brand" },
+  ]
+
   return (
     <>
       <Layout>
@@ -68,7 +78,7 @@ const About = () => {
               <div className="flex justify-start ">
                 <Menu />
               </div>
-              <div className=" flex-col justify-start items-start pt-40 ">
+              <div className=" flex-cols justify-start items-start pt-40 ">
                 <div className="flex items-center gap-7">
                   <Slide>
                     <div className="flex items-center text-2xl text-white">
@@ -124,6 +134,24 @@ const About = () => {
                     </Fade>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="bg-black py-10 px-5">
+            <div className="bg-[#0D0D0D] text-white">
+              <div className="flex justify-center text-lg py-5">Clients</div>
+              <div className="flex flex-row justify-center items-center pb-5 gap-x-16">
+                {clients.map((item, index) => (
+                  <GatsbyImage
+                    image={getImage(
+                      data.allFile.nodes.find(node => node.name === item.name)
+                    )}
+                    alt={item.name}
+                    className="w-20 cursor-pointer"
+                  />
+                ))}
               </div>
             </div>
           </div>

@@ -51,22 +51,27 @@ const Header = () => {
     {
       id: 1,
       name: "About",
+      route: "/about",
     },
     {
       id: 2,
       name: "Resume",
+      route: "/resume",
     },
     {
       id: 3,
       name: "Works",
+      route: "/works",
     },
     {
       id: 4,
       name: "Blogs",
+      route: "/blog",
     },
     {
       id: 5,
       name: "Contact",
+      route: "/contact",
     },
   ]
 
@@ -82,13 +87,18 @@ const Header = () => {
         <div className={scroll ? "fixed top-0 w-full bg-gray-900" : "w-full"}>
           <div className="bg-black pt-5 ">
             <div className="flex justify-end">
-              <Link to="/" className="cursor-pointer custom-link ">
-                <div className="flex items-center justify-between space-x-3 mx-20">
-                  {header.map((item, index) => (
+              <div className="flex items-center justify-between space-x-3 mx-20">
+                {header.map((item, index) => (
+                  <Link
+                    to={item.route}
+                    key={index}
+                    className="text-white custom-link"
+                  >
                     <div
                       className="flex flex-col justify-center items-center text-center   bg-[#212425] text-white hover:bg-gradient-to-r from-red-400 to-pink-500 active:bg-gradient-to-r rounded-lg"
                       key={index}
                       style={{ width: "100px", height: "100px" }}
+                      to={item.route}
                     >
                       <div className="flex justify-center items-center">
                         <GatsbyImage
@@ -103,9 +113,9 @@ const Header = () => {
                       </div>
                       <div className="mt-1">{item.name}</div>
                     </div>
-                  ))}
-                </div>
-              </Link>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
