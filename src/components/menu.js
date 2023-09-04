@@ -87,7 +87,7 @@ const Menu = () => {
               ))}
             </div>
             <div className="flex justify-center items-center mt-7 py-5  px-7 bg-[#212425] rounded-xl">
-              <div className="py-5 px-5 space-y-10 mt-3">
+              <div className="py-5 px-5 space-y-5 mt-3">
                 {submenue.map((item, index) => (
                   <div className="flex flex-cols-2 gap-7 justify-start items-center ">
                     <div className="flex justify-center items-center rounded-lg bg-black w-[45px] h-[45px] space-y-5">
@@ -115,11 +115,14 @@ const Menu = () => {
               </div>
             </div>
             <div className="flex justify-center items-center gap-3 bg-gradient-to-r mt-7 from-red-400 to-pink-500 rounded-xl py-3 cursor-pointer px-3">
-              <StaticImage
-                src="../images/download.png"
-                alt="Download Icon"
-                className="w-7 h-7"
-              />
+              <div className="flex justify-center items-center">
+                {" "}
+                <StaticImage
+                  src="../images/download.png"
+                  alt="Download Icon"
+                  className="w-7 h-7"
+                />
+              </div>
               <div className="flex justify-center items-center text-white">
                 Download CV
               </div>
