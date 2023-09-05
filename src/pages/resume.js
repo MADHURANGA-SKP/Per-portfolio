@@ -90,6 +90,37 @@ const Resume = () => {
     { name: "Java Script", percentage: 10, color: "indigo-500" },
   ]
 
+  const knowladge = [
+    {
+      id: 1,
+      name: "Digital Design",
+    },
+    {
+      id: 2,
+      name: "Marketing",
+    },
+    {
+      id: 3,
+      name: "Communication",
+    },
+    {
+      id: 4,
+      name: "Social Media",
+    },
+    {
+      id: 5,
+      name: "Time Management",
+    },
+    {
+      id: 5,
+      name: "Flexibility",
+    },
+    {
+      id: 5,
+      name: "Print",
+    },
+  ]
+
   return (
     <>
       <Layout>
@@ -202,46 +233,58 @@ const Resume = () => {
             <div className="grid grid-cols-2 grid-rows-1 gap-7 ">
               <div className="flex justify-start flex-col">
                 <div className="text-2xl py-7 flex justify-center items-center gap-7 ">
-                  Working Skills
+                  <Slide>Working Skills</Slide>
                   <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" />
                 </div>
 
-                <div>
-                  {skillsData.map((skill, index) => (
-                    <div
-                      key={index}
-                      className="grid grid-cols-3 py-7 justify-start items-center gap-0 "
-                    >
-                      <div className="flex justify-start text-xl pt-2  text-white  ">
-                        {skill.name}{" "}
+                <Fade delay={2100} cascade damping={1e-1}>
+                  <div className="bg-[#0D0D0D] py-5 px-5 rounded-lg">
+                    {skillsData.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="grid grid-cols-3 py-7 justify-start items-center  "
+                      >
+                        <div className="flex justify-start text-xl pt-2  text-white  ">
+                          {skill.name}{" "}
+                        </div>
+                        <div>
+                          <span className={` text-xl text-${skill.color}`}>
+                            {skill.percentage}%
+                          </span>
+                        </div>
+                        <div className=" flex justify-start relative w-60 h-3 rounded-full overflow-hidden">
+                          <div className="w-full h-full bg-gray-200 absolute "></div>
+                          <div
+                            className={`h-full bg-${skill.color} ${
+                              skill.color === "gray-600"
+                                ? "sm:bg-indigo-500"
+                                : "sm:bg-green-500"
+                            } absolute`}
+                            style={{ width: `${skill.percentage}%` }}
+                          ></div>
+                        </div>
                       </div>
-                      <div>
-                        <span className={` text-xl text-${skill.color}`}>
-                          {skill.percentage}%
-                        </span>
-                      </div>
-                      <div className=" flex justify-start relative w-60 h-3 rounded-full overflow-hidden">
-                        <div className="w-full h-full bg-gray-200 absolute "></div>
-                        <div
-                          className={`h-full bg-${skill.color} ${
-                            skill.color === "gray-600"
-                              ? "sm:bg-indigo-500"
-                              : "sm:bg-green-500"
-                          } absolute`}
-                          style={{ width: `${skill.percentage}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                </Fade>
               </div>
               <div className="flex justify-start flex-col">
                 <div className="text-2xl py-7 flex justify-center items-center gap-7 ">
-                  Knowledges
+                  <Slide>Knowledges</Slide>
                   <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" />
                 </div>
 
-                <div></div>
+                <Fade delay={2100} cascade damping={1e-1}>
+                  <div className="mt-7">
+                    {knowladge.map((item, index) => (
+                      <div className="flex flex-cols justify-center ">
+                        <div className="bg-[#1C1C1C] rounded-lg text-xl px-2 py-1 mt-7">
+                          {item.name}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Fade>
               </div>
             </div>
           </div>
