@@ -82,6 +82,14 @@ const Resume = () => {
     { id: 2, name: "Experience" },
   ]
 
+  const skillsData = [
+    { name: "Html", percentage: 80, color: "yellow-400" },
+    { name: "Tailwind CSS", percentage: 70, color: "red-500" },
+    { name: "Php", percentage: 60, color: "green-500" },
+    { name: "Laravel", percentage: 30, color: "gray-600" },
+    { name: "Java Script", percentage: 10, color: "indigo-500" },
+  ]
+
   return (
     <>
       <Layout>
@@ -99,7 +107,7 @@ const Resume = () => {
                     </div>
                   </Slide>
 
-                  <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" />
+                  <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" />
                 </div>
 
                 <Fade delay={1200} cascade damping={1e-1}>
@@ -147,7 +155,7 @@ const Resume = () => {
                   </Fade>
                 </div>
 
-                <div className="grid grid-cols-2 grid-rows-2 gap-7  ">
+                <div className="grid grid-cols-2 grid-rows-1 gap-7  ">
                   <div className="">
                     {education.map((item, index) => (
                       <Fade delay={2000} cascade damping={1e-1}>
@@ -190,8 +198,54 @@ const Resume = () => {
               </div>
             </div>
           </div>
+          <div className="flex justify-center item-center bg-black text-white py-7">
+            <div className="grid grid-cols-2 grid-rows-1 gap-7 ">
+              <div className="flex justify-start flex-col">
+                <div className="text-2xl py-7 flex justify-center items-center gap-7 ">
+                  Working Skills
+                  <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" />
+                </div>
+
+                <div>
+                  {skillsData.map((skill, index) => (
+                    <div
+                      key={index}
+                      className="grid grid-cols-3 py-7 justify-start items-center gap-0 "
+                    >
+                      <div className="flex justify-start text-xl pt-2  text-white  ">
+                        {skill.name}{" "}
+                      </div>
+                      <div>
+                        <span className={` text-xl text-${skill.color}`}>
+                          {skill.percentage}%
+                        </span>
+                      </div>
+                      <div className=" flex justify-start relative w-60 h-3 rounded-full overflow-hidden">
+                        <div className="w-full h-full bg-gray-200 absolute "></div>
+                        <div
+                          className={`h-full bg-${skill.color} ${
+                            skill.color === "gray-600"
+                              ? "sm:bg-indigo-500"
+                              : "sm:bg-green-500"
+                          } absolute`}
+                          style={{ width: `${skill.percentage}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex justify-start flex-col">
+                <div className="text-2xl py-7 flex justify-center items-center gap-7 ">
+                  Knowledges
+                  <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" />
+                </div>
+
+                <div></div>
+              </div>
+            </div>
+          </div>
         </section>
-        <section></section>
       </Layout>
     </>
   )
