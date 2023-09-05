@@ -84,8 +84,8 @@ const About = () => {
                     <div className="flex items-center text-2xl text-white">
                       About Me
                     </div>
+                    <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" />
                   </Slide>
-                  <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" />
                 </div>
                 <Fade delay={1200} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
