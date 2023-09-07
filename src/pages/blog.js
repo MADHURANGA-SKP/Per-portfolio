@@ -45,11 +45,11 @@ const Blog = () => {
               </div>
               <div className=" flex-cols justify-start items-start pt-40 ">
                 <div className="flex items-center gap-7">
-                  <Slide>
+                  <Fade delay={1200} cascade damping={1e-1}>
                     <div className="flex items-center text-2xl text-white">
                       Blog
                     </div>
-                  </Slide>
+                  </Fade>
                 </div>
 
                 <Fade delay={1200} cascade damping={1e-1}>
@@ -73,24 +73,26 @@ const Blog = () => {
                     What I've done!
                   </div>
                 </Fade>
-                <div className="grid grid-cols-2  gap-5 mt-7">
-                  {grid.map((item, index) => (
-                    <div
-                      key={index}
-                      className=" border border-[#A6A6A6] rounded-lg "
-                    >
-                      <div className="flex justify-center item-center mt-3 text-white mx-5">
-                        {item.name}
+                <Fade delay={2000} cascade damping={1e-1}>
+                  <div className="grid grid-cols-2  gap-5 mt-7">
+                    {grid.map((item, index) => (
+                      <div
+                        key={index}
+                        className=" border border-[#A6A6A6] rounded-lg "
+                      >
+                        <div className="flex justify-center item-center mt-3 text-white mx-5">
+                          {item.name}
+                        </div>
+                        <div className="flex justify-start item-center text-[#A6A6A6] mt-3 mx-5">
+                          {item.description}
+                        </div>
+                        <div className="flex justify-start item-center text-white my-3 mx-5">
+                          {item.deatils}
+                        </div>
                       </div>
-                      <div className="flex justify-start item-center text-[#A6A6A6] mt-3 mx-5">
-                        {item.description}
-                      </div>
-                      <div className="flex justify-start item-center text-white my-3 mx-5">
-                        {item.deatils}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                </Fade>
               </div>
             </div>
           </div>

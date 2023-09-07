@@ -112,7 +112,7 @@ const Resume = () => {
                   </div>
                 </Fade>
                 <Fade delay={2000} cascade damping={1e-1}>
-                  <div>
+                  <div className="mt-7">
                     <div className="flex space-x-4">
                       {tabs.map(tab => (
                         <div
