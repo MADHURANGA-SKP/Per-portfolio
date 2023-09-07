@@ -4,8 +4,9 @@ import Menu from "../components/menu"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 import { Fade, Slide } from "react-awesome-reveal"
+import { useState } from "react"
 
-const Works = () => {
+const Resume = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
@@ -20,67 +21,38 @@ const Works = () => {
     }
   `)
 
-  const education = [
-    {
-      id: 1,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
-    {
-      id: 2,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
-    {
-      id: 3,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
-    {
-      id: 4,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
+  const [activeTab, setActiveTab] = useState("all") // Default active tab is 'all'
+
+  const tabs = [
+    { id: "all", label: "All" },
+    { id: "web-designs", label: "Web Designs" },
+    { id: "mockups", label: "Mockups" },
   ]
 
-  const experience = [
-    {
-      id: 1,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
+  const tabData = {
+    all: {
+      title: "All Items",
+      content: [
+        { id: 1, text: "Item 1" },
+        { id: 2, text: "Item 2" },
+        { id: 3, text: "Item 3" },
+      ],
     },
-    {
-      id: 2,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
+    "web-designs": {
+      title: "Web Designs",
+      content: [
+        { id: 4, text: "Web Design 1" },
+        { id: 5, text: "Web Design 2" },
+      ],
     },
-    {
-      id: 3,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
+    mockups: {
+      title: "Mockups",
+      content: [
+        { id: 6, text: "Mockup 1" },
+        { id: 7, text: "Mockup 2" },
+      ],
     },
-    {
-      id: 4,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
-    },
-  ]
-
-  const resume = [
-    {
-      id: 1,
-      name: "Education",
-    },
-    { id: 2, name: "Experience" },
-  ]
+  }
 
   return (
     <>
@@ -92,15 +64,14 @@ const Works = () => {
                 <Menu />
               </div>
               <div className=" flex-cols justify-start items-start pt-40 ">
-                <div className="flex items-center gap-7">
-                  <Slide>
+                <Fade delay={1200} cascade damping={1e-1}>
+                  <div className="flex items-center gap-7">
                     <div className="flex items-center text-2xl text-white">
                       Resume
                     </div>
-                  </Slide>
-
-                  <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" />
-                </div>
+                  </div>
+                </Fade>
+                {/* <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" /> */}
 
                 <Fade delay={1200} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
@@ -120,81 +91,45 @@ const Works = () => {
                 </Fade>
                 <Fade delay={1800} cascade damping={1e-1}>
                   <div className=" text-2xl text-white mt-7">
-                    What I've done!
+                    What I've done.!
                   </div>
                 </Fade>
-                <div className="grid grid-cols-2  gap-7   text-white justify-start items-center ">
-                  <Fade delay={1900} cascade damping={1e-1}>
-                    {resume.map((item, index) => (
-                      <div className="flex flex-row mt-7">
-                        <div
-                          key={index}
-                          className="flex justify-start item-center gap-3 "
-                        >
-                          <GatsbyImage
-                            image={getImage(
-                              data.allFile.nodes.find(
-                                node => node.name === item.name
-                              )
-                            )}
-                            alt={item.name}
-                            className="w-7"
-                          />
-                          <div>{item.name}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </Fade>
-                </div>
-
-                <div className="grid grid-cols-2 grid-rows-2 gap-7  ">
-                  <div className="">
-                    {education.map((item, index) => (
-                      <Fade delay={2000} cascade damping={1e-1}>
-                        <div className="border border-[#212425] rounded-lg p-5 mt-7">
-                          <div class="flex flex-col ">
-                            <div class="justify-start  text-lg text-white  items-center">
-                              {item.year}
-                            </div>
-                            <div class="justify-start  text-lg text-white  items-center">
-                              {item.degree}
-                            </div>
-                            <div class="justify-start  text-[#A6A6A6]">
-                              {item.where}
-                            </div>
-                          </div>
-                        </div>
-                      </Fade>
-                    ))}
-                  </div>
+                <Fade delay={2000} cascade damping={1e-1}>
                   <div>
-                    {experience.map((item, index) => (
-                      <Fade delay={2000} cascade damping={1e-1}>
-                        <div className="border border-[#212425] rounded-lg p-5 mt-7 ">
-                          <div class="flex flex-col">
-                            <div class="justify-start  text-lg text-white  items-center">
-                              {item.year}
-                            </div>
-                            <div class="justify-start  text-lg text-white  items-center">
-                              {item.profession}
-                            </div>
-                            <div class="justify-start text-[#A6A6A6]">
-                              {item.where}
-                            </div>
-                          </div>
+                    <div className="flex space-x-4">
+                      {tabs.map(tab => (
+                        <div
+                          key={tab.id}
+                          onClick={() => setActiveTab(tab.id)}
+                          className={`cursor-pointer px-3 py-2  rounded ${
+                            activeTab === tab.id
+                              ? "bg-gradient-to-r from-red-400 to-pink-500 text-white"
+                              : "text-[#A6A6A6] "
+                          }`}
+                        >
+                          {tab.label}
                         </div>
-                      </Fade>
-                    ))}
+                      ))}
+                    </div>
+                    <div>
+                      <h2>{tabData[activeTab].title}</h2>
+                      <div>
+                        {tabData[activeTab].content.map(item => (
+                          <div key={item.id} className="text-white">
+                            {item.text}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </Fade>
               </div>
             </div>
           </div>
         </section>
-        <section></section>
       </Layout>
     </>
   )
 }
 
-export default Works
+export default Resume
