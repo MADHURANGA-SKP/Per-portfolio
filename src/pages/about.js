@@ -79,14 +79,14 @@ const About = () => {
                 <Menu />
               </div>
               <div className=" flex-cols justify-start items-start pt-40 ">
-                <div className="flex items-center gap-7">
-                  <Slide>
+                <Fade delay={1200} cascade damping={1e-1}>
+                  <div className="flex items-center gap-7">
                     <div className="flex items-center text-2xl text-white">
                       About Me
                     </div>
-                    <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" />
-                  </Slide>
-                </div>
+                  </div>
+                  {/* <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" /> */}
+                </Fade>
                 <Fade delay={1200} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
                     I'm Creative Director and UI/UX Designer from Sydney,
@@ -105,6 +105,8 @@ const About = () => {
                 </Fade>
                 <Fade delay={1800} cascade damping={1e-1}>
                   <div className=" text-2xl text-white mt-7">What I do!</div>
+
+                  {/* <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" /> */}
                 </Fade>
 
                 <div className="grid grid-cols-2 grid-rows-2 gap-3 mt-7">

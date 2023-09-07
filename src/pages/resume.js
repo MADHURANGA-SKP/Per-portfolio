@@ -131,15 +131,14 @@ const Resume = () => {
                 <Menu />
               </div>
               <div className=" flex-cols justify-start items-start pt-40 ">
-                <div className="flex items-center gap-7">
-                  <Slide>
+                <Fade delay={1200} cascade damping={1e-1}>
+                  <div className="flex items-center gap-7">
                     <div className="flex items-center text-2xl text-white">
                       Resume
                     </div>
-                  </Slide>
-
-                  <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" />
-                </div>
+                  </div>
+                </Fade>
+                {/* <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" /> */}
 
                 <Fade delay={1200} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
@@ -158,10 +157,9 @@ const Resume = () => {
                   </div>
                 </Fade>
                 <Fade delay={1800} cascade damping={1e-1}>
-                  <div className=" text-2xl text-white mt-7">
-                    What I've done!
-                  </div>
+                  <div className=" text-2xl text-white mt-7">What I've.!</div>
                 </Fade>
+                {/* <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" /> */}
                 <div className="grid grid-cols-2  gap-7   text-white justify-start items-center ">
                   <Fade delay={1900} cascade damping={1e-1}>
                     {resume.map((item, index) => (
@@ -229,12 +227,14 @@ const Resume = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center item-center bg-black text-white py-7">
+          <div className="flex justify-center item-center bg-black text-white py-7 px-20">
             <div className="grid grid-cols-2 grid-rows-1 gap-7 ">
               <div className="flex justify-start flex-col">
                 <div className="text-2xl py-7 flex justify-center items-center gap-7 ">
-                  <Slide>Working Skills</Slide>
-                  <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" />
+                  <Fade delay={2100} cascade damping={1e-1}>
+                    Working Skills
+                  </Fade>
+                  {/* <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" /> */}
                 </div>
 
                 <Fade delay={2100} cascade damping={1e-1}>
@@ -242,9 +242,9 @@ const Resume = () => {
                     {skillsData.map((skill, index) => (
                       <div
                         key={index}
-                        className="grid grid-cols-3 py-7 justify-start items-center  "
+                        className="grid grid-cols-3 py-7 justify-center items-center  "
                       >
-                        <div className="flex justify-start text-xl pt-2  text-white  ">
+                        <div className="flex  text-xl pt-2 pr-3  text-white  ">
                           {skill.name}{" "}
                         </div>
                         <div>
@@ -252,7 +252,7 @@ const Resume = () => {
                             {skill.percentage}%
                           </span>
                         </div>
-                        <div className=" flex justify-start relative w-60 h-3 rounded-full overflow-hidden">
+                        <div className=" flex justify-start relative w-50 h-2 rounded-full overflow-hidden">
                           <div className="w-full h-full bg-gray-200 absolute "></div>
                           <div
                             className={`h-full bg-${skill.color} ${
@@ -270,14 +270,15 @@ const Resume = () => {
               </div>
               <div className="flex justify-start flex-col">
                 <div className="text-2xl py-7 flex justify-center items-center gap-7 ">
-                  <Slide>Knowledges</Slide>
-                  <div className="w-44 h-[1px]  bg-gradient-to-r from-red-400 to-pink-500" />
+                  <Fade delay={2100} cascade damping={1e-1}>
+                    Knowledges
+                  </Fade>
                 </div>
 
                 <Fade delay={2100} cascade damping={1e-1}>
-                  <div className="mt-7">
+                  <div className="mt-7 ">
                     {knowladge.map((item, index) => (
-                      <div className="flex flex-cols justify-center ">
+                      <div className="flex flex-cols justify-center  ">
                         <div className="bg-[#1C1C1C] rounded-lg text-xl px-2 py-1 mt-7">
                           {item.name}
                         </div>
