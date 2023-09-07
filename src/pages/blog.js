@@ -20,66 +20,18 @@ const Blog = () => {
     }
   `)
 
-  const education = [
-    {
-      id: 1,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
-    {
-      id: 2,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
-    {
-      id: 3,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
-    {
-      id: 4,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
-  ]
-
-  const experience = [
-    {
-      id: 1,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
-    },
-    {
-      id: 2,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
-    },
-    {
-      id: 3,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
-    },
-    {
-      id: 4,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
-    },
-  ]
-
-  const resume = [
-    {
-      id: 1,
-      name: "Education",
-    },
-    { id: 2, name: "Experience" },
+  const grid = [
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
+    { name: "pasan", description: "pasan", deatils: "pasan" },
   ]
 
   return (
@@ -95,11 +47,9 @@ const Blog = () => {
                 <div className="flex items-center gap-7">
                   <Slide>
                     <div className="flex items-center text-2xl text-white">
-                      Resume
+                      Blog
                     </div>
                   </Slide>
-
-                  <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" />
                 </div>
 
                 <Fade delay={1200} cascade damping={1e-1}>
@@ -123,69 +73,23 @@ const Blog = () => {
                     What I've done!
                   </div>
                 </Fade>
-                <div className="grid grid-cols-2  gap-7   text-white justify-start items-center ">
-                  <Fade delay={1900} cascade damping={1e-1}>
-                    {resume.map((item, index) => (
-                      <div className="flex flex-row mt-7">
-                        <div
-                          key={index}
-                          className="flex justify-start item-center gap-3 "
-                        >
-                          <GatsbyImage
-                            image={getImage(
-                              data.allFile.nodes.find(
-                                node => node.name === item.name
-                              )
-                            )}
-                            alt={item.name}
-                            className="w-7"
-                          />
-                          <div>{item.name}</div>
-                        </div>
+                <div className="grid grid-cols-2  gap-5 mt-7">
+                  {grid.map((item, index) => (
+                    <div
+                      key={index}
+                      className=" border border-[#A6A6A6] rounded-lg "
+                    >
+                      <div className="flex justify-center item-center mt-3 text-white mx-5">
+                        {item.name}
                       </div>
-                    ))}
-                  </Fade>
-                </div>
-
-                <div className="grid grid-cols-2 grid-rows-2 gap-7  ">
-                  <div className="">
-                    {education.map((item, index) => (
-                      <Fade delay={2000} cascade damping={1e-1}>
-                        <div className="border border-[#212425] rounded-lg p-5 mt-7">
-                          <div class="flex flex-col ">
-                            <div class="justify-start  text-lg text-white  items-center">
-                              {item.year}
-                            </div>
-                            <div class="justify-start  text-lg text-white  items-center">
-                              {item.degree}
-                            </div>
-                            <div class="justify-start  text-[#A6A6A6]">
-                              {item.where}
-                            </div>
-                          </div>
-                        </div>
-                      </Fade>
-                    ))}
-                  </div>
-                  <div>
-                    {experience.map((item, index) => (
-                      <Fade delay={2000} cascade damping={1e-1}>
-                        <div className="border border-[#212425] rounded-lg p-5 mt-7 ">
-                          <div class="flex flex-col">
-                            <div class="justify-start  text-lg text-white  items-center">
-                              {item.year}
-                            </div>
-                            <div class="justify-start  text-lg text-white  items-center">
-                              {item.profession}
-                            </div>
-                            <div class="justify-start text-[#A6A6A6]">
-                              {item.where}
-                            </div>
-                          </div>
-                        </div>
-                      </Fade>
-                    ))}
-                  </div>
+                      <div className="flex justify-start item-center text-[#A6A6A6] mt-3 mx-5">
+                        {item.description}
+                      </div>
+                      <div className="flex justify-start item-center text-white my-3 mx-5">
+                        {item.deatils}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
