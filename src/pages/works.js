@@ -27,6 +27,8 @@ const Resume = () => {
     { id: "all", label: "All" },
     { id: "web-designs", label: "Web Designs" },
     { id: "mockups", label: "Mockups" },
+    { id: "templates", label: "Templates" },
+    { id: "designs", label: "Designs" },
   ]
 
   const tabData = {
@@ -38,6 +40,14 @@ const Resume = () => {
         { id: 3, text: "Item 3" },
       ],
     },
+
+    mockups: {
+      title: "Mockups",
+      content: [
+        { id: 6, text: "Mockup 1" },
+        { id: 7, text: "Mockup 2" },
+      ],
+    },
     "web-designs": {
       title: "Web Designs",
       content: [
@@ -45,11 +55,18 @@ const Resume = () => {
         { id: 5, text: "Web Design 2" },
       ],
     },
-    mockups: {
-      title: "Mockups",
+    templates: {
+      title: "Templates",
       content: [
-        { id: 6, text: "Mockup 1" },
-        { id: 7, text: "Mockup 2" },
+        { id: 6, text: "Templates 1" },
+        { id: 7, text: "Templates 2" },
+      ],
+    },
+    designs: {
+      title: "Designs",
+      content: [
+        { id: 6, text: "Designs 1" },
+        { id: 7, text: "Designs 2" },
       ],
     },
   }
