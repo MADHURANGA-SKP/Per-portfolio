@@ -85,7 +85,7 @@ const Header = () => {
         }
       >
         <div className={scroll ? "fixed top-0 w-full bg-gray-900" : "w-full"}>
-          <div className="bg-black pt-5 ">
+          <div className="bg-black py-5 ">
             <div className="flex justify-end">
               <div className="flex items-center justify-between space-x-3 mx-20">
                 {header.map((item, index) => (

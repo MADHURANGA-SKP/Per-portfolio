@@ -71,8 +71,8 @@ const Contact = () => {
                   </div>
                 </Fade>
 
-                <div className="min-h-screen flex items-center justify-center">
-                  <div className=" shadow-md rounded mt-7 pb-8 w-112">
+                <div className="min-h-screen flex items-center justify-center ">
+                  <div className="   mt-7 pb-8 w-full p-7 border border-[#212425] rounded-lg ">
                     <Fade delay={1600} cascade damping={1e-1}>
                       <h2 className=" text-2xl text-white ">
                         Leave somthing Here 😃 For me .!
@@ -90,7 +90,7 @@ const Contact = () => {
                           </label>
 
                           <input
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none focus:shadow-outline"
+                            className=" appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none "
                             type="text"
                             id="name"
                             name="name"
@@ -110,7 +110,7 @@ const Contact = () => {
                             Company or Org
                           </label>
                           <input
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none focus:shadow-outline"
+                            className=" appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none "
                             type="text"
                             id="company"
                             name="company"
@@ -129,7 +129,7 @@ const Contact = () => {
                             Email
                           </label>
                           <input
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none focus:shadow-outline"
+                            className=" appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none "
                             type="email"
                             id="email"
                             name="email"
@@ -149,7 +149,7 @@ const Contact = () => {
                             Suggestions
                           </label>
                           <textarea
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none focus:shadow-outline h-32"
+                            className=" appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none  h-32"
                             id="suggestions"
                             name="suggestions"
                             value={formData.suggestions}
@@ -162,7 +162,7 @@ const Contact = () => {
                       <div className="flex items-center justify-center">
                         <Fade delay={2100} cascade damping={1e-1}>
                           <button
-                            className="bg-gradient-to-r mt-7 from-red-400 to-pink-500 text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline"
+                            className="bg-gradient-to-r mt-7 from-red-400 to-pink-500 text-white font-bold py-2 px-4 rounded-xl focus:outline-none "
                             type="submit"
                           >
                             Submit
