@@ -87,7 +87,7 @@ const About = () => {
                   </div>
                   {/* <div className="w-44 h-[1px] bg-gradient-to-r  from-red-400 to-pink-500" /> */}
                 </Fade>
-                <Fade delay={1200} cascade damping={1e-1}>
+                <Fade delay={1300} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
                     I'm Creative Director and UI/UX Designer from Sydney,
                     Australia, working in web development and print media. I
