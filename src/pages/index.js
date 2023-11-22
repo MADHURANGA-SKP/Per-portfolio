@@ -1,11 +1,26 @@
 import * as React from "react"
+import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import videoSrc from "../video/spaceman-walking-animated-wallpaper.mp4"
 import { useGlitch, GlitchHandle } from "react-powerglitch"
+import { useHistory } from "react-router-dom"
 import { Link } from "gatsby"
+import CircularWithValueLabel from "../components/loading/loading"
 
 const IndexPage = () => {
-  // const glitch = useGlitch()
+  const [loading, setLoading] = React.useState(false)
+
+  const handleButtonClick = () => {
+    setLoading(true)
+
+    // Simulate an asynchronous operation (e.g., fetching data or loading resources)
+    setTimeout(() => {
+      // Set loading to false when the operation is complete
+      setLoading(false)
+      // Navigate to the "/about" page after loading is complete
+      navigate("/about")
+    }, 6000) // Simulate a 6-second loading time
+  }
   return (
     <div className="relative h-screen">
       <video
@@ -26,17 +41,25 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div className="flex bg-black/50 p-10 rounded-3xl mx-10">
-            <Link to="/about" className="w-full">
-              <button class="group relative h-12 w-full md:px-2 px-5 md:py-0 py-3 overflow-hidden rounded-lg bg-black/50 text-lg ">
-                <div class="absolute inset-0 w-3 bg-[#3B71CA]/75 transition-all duration-[800ms] ease-out group-hover:w-full"></div>
-                <span class="relative text-white group-hover:text-white font-semibold uppercase md:text-lg text-xs  ">
+          {loading ? (
+            // Show the loading spinner or message while loading
+            <div className="flex justify-center items-center">
+              <CircularWithValueLabel />
+            </div>
+          ) : (
+            // Render the content of your page when loading is complete
+            <div className="flex bg-black/50 p-10 rounded-3xl mx-10">
+              <button
+                onClick={handleButtonClick}
+                className="group relative h-12 w-full md:px-2 px-5 md:py-0 py-3 overflow-hidden rounded-lg bg-black/50 text-lg"
+              >
+                <div className="absolute inset-0 w-3 bg-[#3B71CA]/75 transition-all duration-[800ms] ease-out group-hover:w-full"></div>
+                <span className="relative text-white group-hover:text-white font-semibold uppercase md:text-lg text-xs">
                   Start your Journey!
                 </span>
               </button>
-            </Link>
-            {/* ref={glitch.ref} */}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
