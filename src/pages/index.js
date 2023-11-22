@@ -1,36 +1,44 @@
 import * as React from "react"
-import { navigate } from "gatsby"
-import Layout from "../components/layout"
-import videoSrc from "../video/spaceman-walking-animated-wallpaper.mp4"
-import { useGlitch, GlitchHandle } from "react-powerglitch"
-import { useHistory } from "react-router-dom"
 import { Link } from "gatsby"
-import CircularWithValueLabel from "../components/loading/loading"
+import { useStaticQuery, graphql } from "gatsby"
+// import CircularWithValueLabel from "../components/loading/loading"
+import BackgroundImage from "gatsby-background-image"
 
 const IndexPage = () => {
-  const [loading, setLoading] = React.useState(false)
+  // const [loading, setLoading] = React.useState(false)
 
-  const handleButtonClick = () => {
-    setLoading(true)
+  // const handleButtonClick = () => {
+  //   setLoading(true)
 
-    // Simulate an asynchronous operation (e.g., fetching data or loading resources)
-    setTimeout(() => {
-      // Set loading to false when the operation is complete
-      setLoading(false)
-      // Navigate to the "/about" page after loading is complete
-      navigate("/about")
-    }, 6000) // Simulate a 6-second loading time
-  }
+  //   // Simulate an asynchronous operation (e.g., fetching data or loading resources)
+  //   setTimeout(() => {
+  //     // Set loading to false when the operation is complete
+  //     setLoading(false)
+  //     // Navigate to the "/about" page after loading is complete
+  //     navigate("/about")
+  //   }, 6000) // Simulate a 6-second loading time
+  // }
+
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "27230.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  const imageData = data.placeholderImage.childImageSharp.fluid
   return (
-    <div className="relative h-screen">
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-      >
-        <source src={videoSrc} type="video/mp4" />
-      </video>
+    <BackgroundImage
+      fluid={imageData}
+      Tag="div"
+      className="h-screen relative"
+      style={{ backgroundSize: "cover" }}
+    >
       <div className="absolute inset-0 bg-black opacity-25" />
 
       <div className="absolute inset-0 flex items-center justify-center card-shine-effect">
@@ -41,28 +49,27 @@ const IndexPage = () => {
             </div>
           </div>
 
-          {loading ? (
+          {/* {loading ? (
             // Show the loading spinner or message while loading
             <div className="flex justify-center items-center">
               <CircularWithValueLabel />
             </div>
           ) : (
-            // Render the content of your page when loading is complete
-            <div className="flex bg-black/50 p-10 rounded-3xl mx-10">
-              <button
-                onClick={handleButtonClick}
-                className="group relative h-12 w-full md:px-2 px-5 md:py-0 py-3 overflow-hidden rounded-lg bg-black/50 text-lg"
-              >
+            // Render the content of your page when loading is complete */}
+          <div className="flex bg-black/50 p-10 rounded-3xl mx-10">
+            <Link to="/about" className="w-full">
+              <button className="group relative h-12 w-full md:px-2 px-5 md:py-0 py-3 overflow-hidden rounded-lg bg-black/50 text-lg">
                 <div className="absolute inset-0 w-3 bg-[#3B71CA]/75 transition-all duration-[800ms] ease-out group-hover:w-full"></div>
                 <span className="relative text-white group-hover:text-white font-semibold uppercase md:text-lg text-xs">
                   Start your Journey!
                 </span>
               </button>
-            </div>
-          )}
+            </Link>
+          </div>
+          {/* )} */}
         </div>
       </div>
-    </div>
+    </BackgroundImage>
   )
 }
 
