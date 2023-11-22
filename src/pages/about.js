@@ -141,7 +141,7 @@ const About = () => {
           </div>
         </section>
         <section>
-          <div className="bg-black py-10 px-5">
+          <div className="bg-black py-10 px-5 pb-20">
             <div className="bg-[#0D0D0D] text-white">
               <div className="flex justify-center text-lg py-5">Clients</div>
               <div className="flex flex-row justify-center items-center pb-5 gap-x-16">

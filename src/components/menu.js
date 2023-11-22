@@ -63,7 +63,7 @@ const Menu = () => {
   return (
     <>
       <section>
-        <div className="bg-black pt-40 ">
+        <div className=" pt-40 ">
           <div className="flex flex-col justify-start items-center">
             <div className="bg-[#A6A6A6] w-[240px] h-[240px] rounded-2xl flex justify-center items-center" />
 
