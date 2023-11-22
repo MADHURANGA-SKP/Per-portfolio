@@ -76,7 +76,7 @@ const Resume = () => {
       <Layout>
         <section>
           <div className="flex justify-start items-center  bg-black">
-            <div className="flex flex-cols gap-7  mx-20 ">
+            <div className="flex flex-cols gap-7  mx-20 pb-20">
               <div className="flex justify-start ">
                 <Menu />
               </div>

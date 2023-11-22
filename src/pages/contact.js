@@ -71,7 +71,7 @@ const Contact = () => {
                   </div>
                 </Fade>
 
-                <div className="min-h-screen flex items-center justify-center ">
+                <div className="flex items-center justify-center pb-20">
                   <div className="   mt-7 pb-8 w-full p-7 border border-[#212425] rounded-lg ">
                     <Fade delay={1600} cascade damping={1e-1}>
                       <h2 className=" text-2xl text-white ">
@@ -79,7 +79,7 @@ const Contact = () => {
                       </h2>
                     </Fade>
 
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className="">
                       <div className="mb-4 mt-7">
                         <Fade delay={1700} cascade damping={1e-1}>
                           <label
