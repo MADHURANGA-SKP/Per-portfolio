@@ -24,38 +24,32 @@ const About = () => {
     {
       id: 1,
       name: "Ui Ux Design",
-      discription:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
+      discription: "Comming Soon.",
     },
     {
       id: 2,
       name: "App Development",
-      discription:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
+      discription: "Comming Soon.",
     },
-    {
-      id: 3,
-      name: "Photography",
-      discription:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
-    },
+    // {
+    //   id: 3,
+    //   name: "Photography",
+    //   discription: "Comming Soon.",
+    // },
     {
       id: 4,
       name: "Web Development",
-      discription:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
+      discription: "Comming Soon.",
     },
     {
       id: 5,
       name: "Mobile App Development",
-      discription:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
+      discription: "Comming Soon.",
     },
     {
       id: 6,
       name: "IT Support",
-      discription:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.",
+      discription: "Comming Soon.",
     },
   ]
 
@@ -89,18 +83,15 @@ const About = () => {
                 </Fade>
                 <Fade delay={1300} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
-                    I'm Creative Director and UI/UX Designer from Sydney,
-                    Australia, working in web development and print media. I
-                    enjoy turning complex problems into simple, beautiful and
-                    intuitive designs.
+                    I'm Freelancer and Trainee Trainee Full-Stack Developer from
+                    Sri lanka, working in WebApp development.
                   </div>
                 </Fade>
 
                 <Fade delay={1400} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
-                    My aim is to bring across your message and identity in the
-                    most creative way. I created web design for many famous
-                    brand companies.
+                    My aim is to bring Success to your requiremnt in most
+                    creative way.
                   </div>
                 </Fade>
                 <Fade delay={1800} cascade damping={1e-1}>

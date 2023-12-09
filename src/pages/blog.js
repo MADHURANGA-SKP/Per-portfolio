@@ -21,17 +21,15 @@ const Blog = () => {
   `)
 
   const grid = [
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
-    { name: "pasan", description: "pasan", deatils: "pasan" },
+    {
+      name: "Blog 01",
+      description: "blogs may avalible when pbulished",
+      deatils: "",
+    },
+    // { name: "Blog 02", description: "pasan", deatils: "" },
+    // { name: "Blog 03", description: "pasan", deatils: "" },
+    // { name: "Blog 04", description: "pasan", deatils: "" },
+    // { name: "Blog 05", description: "pasan", deatils: "" },
   ]
 
   return (
@@ -54,36 +52,37 @@ const Blog = () => {
 
                 <Fade delay={1200} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
-                    I'm Creative Director and UI/UX Designer from Sydney,
-                    Australia, working in web development and print media. I
-                    enjoy turning complex problems into simple, beautiful and
-                    intuitive designs.
+                    Welcome to the blog page! This is where I share my thoughts
+                    on various topics related to web development, programming,
+                    and technology.
                   </div>
                 </Fade>
 
                 <Fade delay={1400} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
-                    My aim is to bring across your message and identity in the
-                    most creative way. I created web design for many famous
-                    brand companies.
+                    In this blog, you’ll find articles ranging from in-depth
+                    tutorials and how-to guides, to discussions on best
+                    practices and emerging trends in the tech industry. Whether
+                    you’re a fellow developer, a tech enthusiast, or just
+                    curious, there’s something here for you.
                   </div>
                 </Fade>
                 <Fade delay={1800} cascade damping={1e-1}>
                   <div className=" text-2xl text-white mt-7">
-                    What I've done!
+                    Happy reading!
                   </div>
                 </Fade>
                 <Fade delay={2000} cascade damping={1e-1}>
-                  <div className="grid grid-cols-2  gap-5 mt-7">
+                  <div className="grid grid-cols-1  gap-5 mt-7">
                     {grid.map((item, index) => (
                       <div
                         key={index}
-                        className=" border border-[#A6A6A6] rounded-lg "
+                        className=" border border-[#212425] rounded-lg "
                       >
                         <div className="flex justify-center item-center mt-3 text-white mx-5">
                           {item.name}
                         </div>
-                        <div className="flex justify-start item-center text-[#A6A6A6] mt-3 mx-5">
+                        <div className="flex justify-center item-center text-[#A6A6A6] mt-3 mx-5">
                           {item.description}
                         </div>
                         <div className="flex justify-start item-center text-white my-3 mx-5">

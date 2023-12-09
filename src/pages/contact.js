@@ -2,8 +2,9 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import Menu from "../components/menu"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
+
 import { Fade, Slide } from "react-awesome-reveal"
+import { Link } from "gatsby"
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -52,22 +53,22 @@ const Contact = () => {
               </div>
               <div className=" flex-cols justify-start items-start pt-40 ">
                 <Fade delay={1200} cascade damping={1e-1}>
-                  <div className="text-2xl text-white"> Contact us</div>
+                  <div className="text-2xl text-white">Drop me a line</div>
                 </Fade>
                 <Fade delay={1400} cascade damping={1e-1}>
                   <div>
                     <div class="mt-7 text-[#A6A6A6]">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Laudantium, modiaccusantium ipsum corporis quia asperiores
-                      dolorem nisi corrupti eveniet dolores ad maiores
-                      repellendus enim autem omnis fugiat perspiciatis? Ad,
-                      veritatis.
+                      love to hear from you! Whether you have a question or,
+                      need assistance or may be just want to talk, please don’t
+                      hesitate to reach out.
                     </div>
-                    <div class="mt-7 text-[#A6A6A6]">
-                      New York, 94126, United States
+                    <div class="mt-24 mb-14 text-[#A6A6A6] cursor-pointer">
+                      <Link to="https://github.com/MADHURANGA-SKP">
+                        Github: MADHURANGA-SKP
+                      </Link>
                     </div>
-                    <div class="mt-7 text-[#A6A6A6]">+ 01 234 567 89</div>
-                    <div class="mt-7 text-[#A6A6A6]">info@gmail.com</div>
+                    {/* <div class="mt-7 text-[#A6A6A6]">+ 01 234 567 89</div> */}
+                    {/* <div class="mt-7 text-[#A6A6A6]">info@gmail.com</div> */}
                   </div>
                 </Fade>
 

@@ -23,54 +23,48 @@ const Resume = () => {
   const education = [
     {
       id: 1,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
+      year: "2020 to 2024",
+      degree: "Bachelor of ICTs (Hons)",
+      where: "University of Jaffna Vavuniya Campus",
     },
     {
       id: 2,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
+      year: "2015 to 2018",
+      degree: "GCE Advanced Level",
+      where: "R/Sivali Central College",
     },
     {
       id: 3,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
+      year: "2008 to 2015",
+      degree: "GCE Ordinary Level",
+      where: "R/Sivali Central College",
     },
-    {
-      id: 4,
-      year: "2021-2023",
-      degree: "Ph.D in Horriblensess ",
-      where: "- ABC University,Los Angeles, CA",
-    },
+    // {
+    //   id: 4,
+    //   year: "2021-2023",
+    //   degree: "Ph.D in Horriblensess ",
+    //   where: "- ABC University,Los Angeles, CA",
+    // },
   ]
 
   const experience = [
     {
       id: 1,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
+      year: "November 2023 - Present",
+      profession: "Freelancer",
+      where: "",
     },
     {
       id: 2,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
+      year: "July 2023 – November 2023",
+      profession: "Intern Software Engineer",
+      where: "Wyld Global (Pvt) Ltd",
     },
     {
       id: 3,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
-    },
-    {
-      id: 4,
-      year: "2019 - Present",
-      profession: "Sr. Software Tester",
-      where: "Google Inc.",
+      year: "January 2023 - July 2023",
+      profession: "Intern Software Engineer",
+      where: "Explorelogy (Pvt) Ltd.",
     },
   ]
 
@@ -83,41 +77,70 @@ const Resume = () => {
   ]
 
   const skillsData = [
-    { name: "Html", percentage: 80, color: "yellow-400" },
-    { name: "Tailwind CSS", percentage: 70, color: "red-500" },
-    { name: "Php", percentage: 60, color: "green-500" },
+    { name: "React JS", percentage: 60, color: "red-400" },
+    { name: "Angular JS", percentage: 40, color: "yellow-500" },
+    { name: "Vue JS", percentage: 40, color: "yellow-500" },
+    { name: "Node JS", percentage: 40, color: "gray-600" },
+    { name: "Java Script", percentage: 60, color: "indigo-500" },
+    { name: "PHP", percentage: 40, color: "green-500" },
     { name: "Laravel", percentage: 30, color: "gray-600" },
-    { name: "Java Script", percentage: 10, color: "indigo-500" },
+    { name: "REST", percentage: 45, color: "indigo-500" },
+    { name: "Tailwind CSS", percentage: 60, color: "red-500" },
+    { name: "MySQL", percentage: 50, color: "gray-600" },
+    { name: "MongoDB", percentage: 45, color: "red-500" },
+    { name: "Tailwind CSS", percentage: 60, color: "red-500" },
   ]
 
   const knowladge = [
     {
       id: 1,
-      name: "Digital Design",
+      name: "Jira",
     },
     {
       id: 2,
-      name: "Marketing",
+      name: "Slack",
     },
     {
       id: 3,
-      name: "Communication",
+      name: "Lark",
     },
     {
       id: 4,
-      name: "Social Media",
+      name: "Click Up",
     },
     {
       id: 5,
-      name: "Time Management",
+      name: "Figma",
     },
     {
-      id: 5,
-      name: "Flexibility",
+      id: 6,
+      name: "Adobe XD",
     },
     {
-      id: 5,
-      name: "Print",
+      id: 7,
+      name: "Miro",
+    },
+    {
+      id: 8,
+      name: "WordPress",
+    },
+
+    {
+      id: 9,
+      name: "XAMPP",
+    },
+
+    {
+      id: 10,
+      name: "VS Code",
+    },
+    {
+      id: 11,
+      name: "GitHub",
+    },
+    {
+      id: 12,
+      name: "Firebase(Backend as a Service)",
     },
   ]
 
@@ -142,18 +165,17 @@ const Resume = () => {
 
                 <Fade delay={1200} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
-                    I'm Creative Director and UI/UX Designer from Sydney,
-                    Australia, working in web development and print media. I
-                    enjoy turning complex problems into simple, beautiful and
-                    intuitive designs.
+                    Undergraduate Trainee Full stack developer with 1 years of
+                    industrial experience, And specialize in building responsive
+                    web applications using modern technologies.
                   </div>
                 </Fade>
 
                 <Fade delay={1400} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
-                    My aim is to bring across your message and identity in the
-                    most creative way. I created web design for many famous
-                    brand companies.
+                    I am passionate developer and enjoy collaborating with
+                    cross-functional teams to deliver high-quality software
+                    solutions.
                   </div>
                 </Fade>
                 <Fade delay={1800} cascade damping={1e-1}>
@@ -271,7 +293,7 @@ const Resume = () => {
               <div className="flex justify-start flex-col">
                 <div className="text-2xl py-7 flex justify-center items-center gap-7 ">
                   <Fade delay={2100} cascade damping={1e-1}>
-                    Knowledges
+                    Tools & Technologies
                   </Fade>
                 </div>
 

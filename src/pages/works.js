@@ -35,38 +35,38 @@ const Resume = () => {
     all: {
       title: "All Items",
       content: [
-        { id: 1, text: "Item 1" },
-        { id: 2, text: "Item 2" },
-        { id: 3, text: "Item 3" },
+        { id: 1, text: "Not Visible" },
+        { id: 2, text: "Not Visible" },
+        { id: 3, text: "Not Visible" },
       ],
     },
 
     mockups: {
       title: "Mockups",
       content: [
-        { id: 6, text: "Mockup 1" },
-        { id: 7, text: "Mockup 2" },
+        { id: 6, text: "Comming Soon" },
+        { id: 7, text: "Comming Soon" },
       ],
     },
     "web-designs": {
       title: "Web Designs",
       content: [
-        { id: 4, text: "Web Design 1" },
-        { id: 5, text: "Web Design 2" },
+        { id: 4, text: "Comming Soon" },
+        { id: 5, text: "Comming Soon" },
       ],
     },
     templates: {
       title: "Templates",
       content: [
-        { id: 6, text: "Templates 1" },
-        { id: 7, text: "Templates 2" },
+        { id: 6, text: "Comming Soon" },
+        { id: 7, text: "Comming Soon" },
       ],
     },
     designs: {
       title: "Designs",
       content: [
-        { id: 6, text: "Designs 1" },
-        { id: 7, text: "Designs 2" },
+        { id: 6, text: "Comming Soon" },
+        { id: 7, text: "Comming Soon" },
       ],
     },
   }
@@ -84,7 +84,7 @@ const Resume = () => {
                 <Fade delay={1200} cascade damping={1e-1}>
                   <div className="flex items-center gap-7">
                     <div className="flex items-center text-2xl text-white">
-                      Resume
+                      Work
                     </div>
                   </div>
                 </Fade>
@@ -92,10 +92,11 @@ const Resume = () => {
 
                 <Fade delay={1200} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
-                    I'm Creative Director and UI/UX Designer from Sydney,
-                    Australia, working in web development and print media. I
-                    enjoy turning complex problems into simple, beautiful and
-                    intuitive designs.
+                    I embarked on my journey as a Full-Stack Developer with a
+                    keen interest in both front-end and back-end technologies.
+                    As a trainee, I’m learning to build dynamic and responsive
+                    websites, working with databases, and understanding how to
+                    create seamless and intuitive user experiences.
                   </div>
                 </Fade>
 

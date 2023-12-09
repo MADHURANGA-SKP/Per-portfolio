@@ -33,6 +33,7 @@ module.exports = {
           "Poppins:400,500,700", // Specify the desired font weights
         ],
         display: "swap", // Use font-display: swap to improve loading
+        icon: `src/images/tlogo.png`,
       },
     },
   ],
