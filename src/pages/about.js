@@ -84,15 +84,13 @@ const About = () => {
                 <Fade delay={1300} cascade damping={1e-1}>
                   <div className=" text-lg mt-7 text-[#A6A6A6]">
                     I'm Freelancer and Trainee Trainee Full-Stack Developer from
-                    Sri lanka, working in WebApp development.
+                    Sri lanka, working in WebApp development. My aim is to bring
+                    Success to your requiremnt in most creative way.
                   </div>
                 </Fade>
 
                 <Fade delay={1400} cascade damping={1e-1}>
-                  <div className=" text-lg mt-7 text-[#A6A6A6]">
-                    My aim is to bring Success to your requiremnt in most
-                    creative way.
-                  </div>
+                  <div className=" text-lg mt-7 text-[#A6A6A6]"></div>
                 </Fade>
                 <Fade delay={1800} cascade damping={1e-1}>
                   <div className=" text-2xl text-white mt-7">What I do!</div>
@@ -136,7 +134,7 @@ const About = () => {
             <div className="bg-[#0D0D0D] text-white">
               <div className="flex justify-center text-lg py-5">Clients</div>
               <div className="flex flex-row justify-center items-center pb-5 gap-x-16">
-                {clients.map((item, index) => (
+                {/* {clients.map((item, index) => (
                   <GatsbyImage
                     image={getImage(
                       data.allFile.nodes.find(node => node.name === item.name)
@@ -144,7 +142,7 @@ const About = () => {
                     alt={item.name}
                     className="w-20 cursor-pointer"
                   />
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
