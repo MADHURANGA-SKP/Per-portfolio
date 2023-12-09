@@ -23,7 +23,7 @@ const Blog = () => {
   const grid = [
     {
       name: "Blog 01",
-      description: "blogs may avalible when pulished",
+      description: "blogs may avalible when published",
       deatils: "",
     },
     // { name: "Blog 02", description: "pasan", deatils: "" },

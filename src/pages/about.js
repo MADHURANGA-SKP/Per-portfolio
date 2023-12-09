@@ -90,7 +90,12 @@ const About = () => {
                 </Fade>
 
                 <Fade delay={1400} cascade damping={1e-1}>
-                  <div className=" text-lg mt-7 text-[#A6A6A6]"></div>
+                  <div className=" text-lg mt-7 text-[#A6A6A6]">
+                    With a passion for coding and a commitment to delivering
+                    top-notch solutions, I am dedicated to making your digital
+                    vision a reality through my expertise as a Full-Stack
+                    Development
+                  </div>
                 </Fade>
                 <Fade delay={1800} cascade damping={1e-1}>
                   <div className=" text-2xl text-white mt-7">What I do!</div>
