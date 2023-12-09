@@ -2,10 +2,11 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import Menu from "../components/menu"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { getDatabase } from "firebase/database"
+import { ref, push, child, update } from "firebase/database"
 import { Fade, Slide } from "react-awesome-reveal"
 import { Link } from "gatsby"
-
+import { app } from "../../firebase-config.js"
 const Contact = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -20,26 +21,39 @@ const Contact = () => {
       }
     }
   `)
+  const database = getDatabase(app)
+  const [name, setName] = useState(null)
+  const [company, setCompany] = useState(null)
+  const [email, setEmail] = useState(null)
+  const [suggestions, setSuggestions] = useState(null)
 
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    suggestions: "",
-  })
-
-  const handleChange = e => {
-    const { name, value } = e.target
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value,
-    }))
+  const handleInputChange = e => {
+    const { id, value } = e.target
+    if (id === "name") {
+      setName(value)
+    }
+    if (id === "company") {
+      setCompany(value)
+    }
+    if (id === "email") {
+      setEmail(value)
+    }
+    if (id === "suggestions") {
+      setSuggestions(value)
+    }
   }
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    // You can add your form submission logic here
-    console.log("Form data submitted:", formData)
+  const handleSubmit = () => {
+    let obj = {
+      name: name,
+      company: company,
+      email: email,
+      suggestions: suggestions,
+    }
+    const newPostKey = push(child(ref(database), "posts")).key
+    const updates = {}
+    updates["/" + newPostKey] = obj
+    return update(ref(database), updates)
   }
 
   return (
@@ -80,7 +94,7 @@ const Contact = () => {
                       </h2>
                     </Fade>
 
-                    <form onSubmit={handleSubmit} className="">
+                    <form onSubmit={handleInputChange} className="">
                       <div className="mb-4 mt-7">
                         <Fade delay={1700} cascade damping={1e-1}>
                           <label
@@ -95,8 +109,8 @@ const Contact = () => {
                             type="text"
                             id="name"
                             name="name"
-                            value={formData.name}
-                            onChange={handleChange}
+                            value={name}
+                            onChange={e => handleInputChange(e)}
                             placeholder="Your Name"
                             required
                           />
@@ -115,8 +129,8 @@ const Contact = () => {
                             type="text"
                             id="company"
                             name="company"
-                            value={formData.company}
-                            onChange={handleChange}
+                            value={company}
+                            onChange={e => handleInputChange(e)}
                             placeholder="Your Company or Organization"
                           />
                         </Fade>
@@ -134,8 +148,8 @@ const Contact = () => {
                             type="email"
                             id="email"
                             name="email"
-                            value={formData.email}
-                            onChange={handleChange}
+                            value={email}
+                            onChange={e => handleInputChange(e)}
                             placeholder="Your Email"
                             required
                           />
@@ -153,8 +167,8 @@ const Contact = () => {
                             className=" appearance-none border rounded w-full py-2 px-3 text-[#A6A6A6] leading-tight focus:outline-none  h-32"
                             id="suggestions"
                             name="suggestions"
-                            value={formData.suggestions}
-                            onChange={handleChange}
+                            value={suggestions}
+                            onChange={e => handleInputChange(e)}
                             placeholder="Your Suggestions"
                             required
                           />
@@ -165,6 +179,7 @@ const Contact = () => {
                           <button
                             className="bg-gradient-to-r mt-7 from-red-400 to-pink-500 text-white font-bold py-2 px-4 rounded-xl focus:outline-none "
                             type="submit"
+                            onClick={() => handleSubmit()}
                           >
                             Submit
                           </button>
@@ -184,3 +199,4 @@ const Contact = () => {
 }
 
 export default Contact
+export const database = getDatabase(app)

@@ -6,8 +6,10 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "cli": "^1.0.1",
+    "firebase": "^10.7.1",
     "gatsby": "^5.12.4",
     "gatsby-background-image": "^1.6.0",
+    "gatsby-plugin-firebase": "^0.2.0-beta.4",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.12.0",
     "gatsby-plugin-manifest": "^5.12.0",
