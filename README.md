@@ -18,13 +18,14 @@ Welcome to my portfolio website! This website version 0.1 of my Per-portfolio to
 ## Live Demo
 
 Check out the live demo: https://per-portfolio-6014c.firebaseapp.com/
+
+## welcome page
 ![Sample Image](./ss-01.png)
+
+## About page
 ![Sample Image](./ss-02.png)
+
+## Contact page
 ![Sample Image](./ss-03.png)
 
-## Setup
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/portfolio-sample.git
+   
